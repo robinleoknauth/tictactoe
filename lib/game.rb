@@ -19,19 +19,8 @@ class Game
     while board.winner.nil?
       play_turn
     end
-    # print "-" * board.grid.length * 12
-    # puts ""
-    # board.grid.each do |row|
-    #   row.each do |pos|
-    #     if !pos.nil?
-    #       print " | #{pos} | "
-    #     else
-    #       print " |   | "
-    #     end
-    #   end
-    #   print "\n"
-    # end
-    # render # no idea why this doesnt work
+
+    current_player.display(board)
     puts "#{current_player.name} won!"
   end
 
