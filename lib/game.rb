@@ -44,8 +44,8 @@ if $0 == __FILE__
   puts "Welcome to TicTacToe!"
   print "Please enter your name: "
   player1 = HumanPlayer.new(gets.chomp)
-  print "Please enter your computers name: "
-  player2 = ComputerPlayer.new(gets.chomp)
+  # print "Please enter your computers name: "
+  player2 = ComputerPlayer.new("Computer")
   game = Game.new(player1, player2)
   game.play
 end
