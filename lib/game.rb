@@ -31,10 +31,10 @@ class Game
   def play_turn
     current_player.display(board)
     move = current_player.get_move
-    if !board.empty?(move)
-      puts "Sorry, this position has already been taken. Please try again"
-      return
-    end
+    # if !board.empty?(move)
+    #   puts "Sorry, this position has already been taken. Please try again"
+    #   return
+    # end
 
     board.place_mark(move, current_player.mark)
     switch_players! if board.winner.nil?
