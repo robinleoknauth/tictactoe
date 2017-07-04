@@ -1,7 +1,7 @@
 class Board
   attr_reader :grid
 
-  
+
 
   def initialize(grid = Array.new(3) { Array.new(3) })
     @grid = grid
@@ -70,12 +70,5 @@ class Board
     @grid[pos.first][pos.last] = mark
   end
 
-  # def display
-  #   puts "---------------"
-  #   (0..@grid.length-1).each do |idx|
-  #     p @grid[idx].join(" | ")
-  #     puts "---------------"
-  #   end
-  # end
 
 end

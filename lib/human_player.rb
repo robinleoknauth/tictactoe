@@ -27,6 +27,7 @@ class HumanPlayer
     puts "Where would you like to place your mark?"
     move = gets.chomp
     move.split(",").map!(&:to_i)
+    
   end
 
 end

@@ -16,17 +16,26 @@ class Game
 
 
   def play
-    while board.winner.nil?
+
+    until board.over?
       play_turn
     end
-
-    current_player.display(board)
-    puts "#{current_player.name} won!"
+    if board.winner
+      puts "#{current_player.name} won!"
+    else
+      p "Cats game - It's a tie!"
+    end
+    @current_player.display(board)
   end
 
   def play_turn
     current_player.display(board)
     move = current_player.get_move
+    if !board.empty?(move)
+      puts "Sorry, this position has already been taken. Please try again"
+      return
+    end
+
     board.place_mark(move, current_player.mark)
     switch_players! if board.winner.nil?
   end
